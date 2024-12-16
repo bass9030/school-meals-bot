@@ -125,7 +125,7 @@ setInterval(async () => {
     if (!!!CHANNEL_ID && !!!HOUR && !!!MINUTE) return;
 
     let date = new Date();
-    if (date.getHours() != HOUR && date.getMinutes() != MINUTE) return;
+    if (date.getHours() != HOUR || date.getMinutes() != MINUTE) return;
 
     // 주말
     if (date.getDay() == 6 || date.getDay() == 0) return;
